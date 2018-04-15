@@ -38,5 +38,12 @@ yarn prod
 
 ```bash
 curl http://localhost:3210/api/spell/\?word\=speling
-{"corrected":"spelling"}
+{"result":"spelling"}
+```
+
+Or if there are any errors:
+
+```bash
+curl http://localhost:3210/api/spell/\?word\=speling
+{"error":"Dictionary not found!"}
 ```
