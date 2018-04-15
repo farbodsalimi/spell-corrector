@@ -10,8 +10,16 @@ app.use(
 );
 
 app.get("/api/spell", async (req, res) => {
-  const corrected = await spell.api(req.query.word);
-  res.json({ corrected });
+  const result = await spell.api(req.query.word);
+
+  // check if there are any errors from C lib
+  // the first 9 characters indicate the errors
+  if (result.substr(0, 9) === "{{error}}") {
+    res.status(500).send({ error: result.substr(9) });
+    return;
+  }
+
+  res.json({ result });
 });
 
 app.listen(PORT, () => console.log(`Spell checker listening on port ${PORT}!`));
