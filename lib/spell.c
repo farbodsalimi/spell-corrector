@@ -14,7 +14,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-#define DICTIONARY "/path/to/dictionary.txt"
+#define DICTIONARY "./lib/dictionary.txt"
 #define DICT_SZ    3000000
 
 const char delim[]    = ".,:;`/\"+-_(){}[]<>*&^%$#@!?~/|\\=1234567890 \t\n";
