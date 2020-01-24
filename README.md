@@ -6,7 +6,7 @@ Spelling corrector based on [norvig](http://norvig.com/spell-correct.html) algor
 
 ![ffi diagram](https://raw.githubusercontent.com/farbodsalimi/spell-checker/master/diagram.png)
 
-## 🍕 Get Started
+## Get Started
 
 ### Building
 
@@ -28,7 +28,7 @@ yarn dev
 
 ### Production
 
-🚨 Note: You need to have [PM2](http://pm2.keymetrics.io/) installed for this command
+Note: You need to have [PM2](http://pm2.keymetrics.io/) installed for this command
 
 ```bash
 yarn prod
